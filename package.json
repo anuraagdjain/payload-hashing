@@ -3,6 +3,9 @@
   "author": {
     "name": "Anuraag Jain"
   },
+  "repository": {
+    "url": "https://github.com/anuraagdjain/payload-hashing"
+  },
   "version": "0.0.1",
   "devDependencies": {
     "@types/jest": "^29.5.14",
