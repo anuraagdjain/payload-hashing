@@ -1,0 +1,16 @@
+{
+  "name": "@adj/payload-hashing",
+  "author": {
+    "name": "Anuraag Jain"
+  },
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint .",
+    "test": "jest test"
+  }
+}
