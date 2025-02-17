@@ -41,7 +41,7 @@ describe('payloadHashingImpl',( ) => {
         expect(result).toEqual('x.location.latitude:0,x.location.longitude:0,x.location.zipcode:0,x.metadata.notification[0].account_expired:true,x.metadata.notification[0].last_active:2021-01-01T01:00:00.000Z,x.name:javascript,y:true');
     })
 
-    it.skip('should handle date correctly',() => {
+        it.skip('should handle date correctly',() => {
         const input1 = {
             y: true,
             x: new Date('2021-01-01T01:00:00Z')
@@ -53,6 +53,26 @@ describe('payloadHashingImpl',( ) => {
             Received: ",y:true"
          */
         expect(result).toEqual('x:2021-01-01T01:00:00.000Z,y:true');
+    })
+
+    it.skip('should handle mixed array correctly',() => {
+        const input1 = {
+            y: true,
+            x: [
+                {name: 'javascript'},
+                false,
+                1,
+                {c: 2}
+            ]
+        };
+        const result = payloadHashingImpl(input1);
+        /**
+         * FIX ME
+         *  Expected: "x[0].name:javascript,x[0]:1,x[0].c:2,y:true"
+            Received: "x[0].name:javascript,,,x[3].c:2,y:true"
+         */
+        console.log(result);
+        expect(result).toEqual('x[0].name:javascript,x[0]:1,x[0].c:2,y:true');
     })
 
 });
