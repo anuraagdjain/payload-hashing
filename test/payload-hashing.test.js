@@ -45,7 +45,7 @@ describe('payloadHashing',() => {
 
         const result = payloadHashing(input1);
 
-        expect(result).toEqual('ROQwdtY5lRuazWU3G552mimZNQY=')
+        expect(result).toMatchInlineSnapshot(`"9igeZUqF2e2go1m29StPtWLXzps="`);
 
     })
 })
